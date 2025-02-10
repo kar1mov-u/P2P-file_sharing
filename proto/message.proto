@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package network;
+
+option go_package = "internal/network/proto";
+
+//Message for peer discovery
+message PeerDiscoverRequest {}
+
+//Message for peer discovery response
+
+message PeerDiscoverResponse{
+    map <string, string> peers = 1;
+}
+
+

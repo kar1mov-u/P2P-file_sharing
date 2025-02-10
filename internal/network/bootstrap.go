@@ -74,6 +74,7 @@ func (bs *BootstrapServer) ServeClient(conn net.Conn) {
 		if message == "peer-discover" {
 			resp := bs.GetPeers()
 			respJson, err := json.Marshal(resp)
+
 			if err != nil {
 				fmt.Println("Failed to Serialize to Json", err)
 				conn.Write([]byte("{}"))
@@ -85,6 +86,7 @@ func (bs *BootstrapServer) ServeClient(conn net.Conn) {
 			if err != nil {
 				fmt.Println("failed to write the Response", err)
 			}
+
 		}
 	}
 }
