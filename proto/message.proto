@@ -5,7 +5,9 @@ package network;
 option go_package = "internal/network/proto";
 
 //Message for peer discovery
-message PeerDiscoverRequest {}
+message ClientRequest {
+    string type = 1;
+}
 
 //Message for peer discovery response
 
